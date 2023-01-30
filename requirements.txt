@@ -16,6 +16,8 @@ wandb
 # comet-ml
 
 # --------- others --------- #
+kaggle          # for download datasets
+timm            # additional module for convnext
 pyrootutils     # standardizing the project root setup
 pre-commit      # hooks for applying linters on commit
 rich            # beautiful text formatting in terminal
