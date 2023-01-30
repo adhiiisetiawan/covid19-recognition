@@ -64,3 +64,7 @@ class Covid19DataModule(pl.LightningDataModule):
 
     def test_dataloader(self):
         return DataLoader(self.test, batch_size=self.batch_size, num_workers=2)
+
+
+if __name__ == "__main__":
+    _ = Covid19DataModule()
