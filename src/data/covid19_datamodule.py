@@ -6,6 +6,10 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from kaggle.api.kaggle_api_extended import KaggleApi
 
+os.environ['KAGGLE_USERNAME'] = "adhisetiawan"
+os.environ['KAGGLE_KEY'] = "96ce54a3b358a4b04a716080f32292ec"
+
+
 class Covid19DataModule(pl.LightningDataModule):
     def __init__(self, batch_size, data_dir: str = './'):
         super().__init__()
