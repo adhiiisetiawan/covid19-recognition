@@ -108,3 +108,7 @@ class ConvNeXtLitModel(pl.LightningModule):
     
     def configure_optimizers(self):
         return torch.optim.Adam(self.parameters(), lr=self.learning_rate)
+
+
+if __name__ == "__main__":
+    _ = ConvNeXtLitModel(None, None, None,  None)
