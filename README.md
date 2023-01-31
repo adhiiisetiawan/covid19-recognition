@@ -27,13 +27,13 @@ They are also provide GitHub link that can be found [here](https://github.com/ie
 
 This project using ConvNeXt architecture, ConvNeXt is a modification of the ResNet architecture for deep ConvNets. It introduces the concept of "grouped convolutions" which allow for a more efficient utilization of computation resources such as memory and computation power. The main features of ConvNeXt include:
 
-1. Grouped Convolutions: The main difference from ResNet is that ConvNeXt uses grouped convolutions instead of standard convolutions in the residual blocks. Grouped convolutions split the input channels into groups, and apply a separate set of filters to each group. This allows for more computation to be done with a smaller number of parameters, which helps reduce overfitting.
+1. **Grouped Convolutions:** The main difference from ResNet is that ConvNeXt uses grouped convolutions instead of standard convolutions in the residual blocks. Grouped convolutions split the input channels into groups, and apply a separate set of filters to each group. This allows for more computation to be done with a smaller number of parameters, which helps reduce overfitting.
 
-2. Bottleneck Design: ConvNeXt uses a bottleneck design, where the number of filters in the 3x3 convolution is reduced, and then increased again using a 1x1 convolution. This design helps reduce the number of parameters and computational costs.
+2. **Bottleneck Design:** ConvNeXt uses a bottleneck design, where the number of filters in the 3x3 convolution is reduced, and then increased again using a 1x1 convolution. This design helps reduce the number of parameters and computational costs.
 
-3. Stem and Head: ConvNeXt has a stem and head component, which includes several convolutional layers to extract features from the input image and several fully connected layers to make the final prediction.
+3. **Stem and Head:** ConvNeXt has a stem and head component, which includes several convolutional layers to extract features from the input image and several fully connected layers to make the final prediction.
 
-4. Dense Connections: ConvNeXt uses dense connections, which means that every residual block is connected to every other block in the network. This helps reduce the vanishing gradient problem that can occur in deep ConvNets.
+4. **Dense Connections:** ConvNeXt uses dense connections, which means that every residual block is connected to every other block in the network. This helps reduce the vanishing gradient problem that can occur in deep ConvNets.
 
 Overall, the ConvNeXt architecture aims to balance efficiency and performance, and has been shown to achieve state-of-the-art results on various computer vision tasks such as image classification and object detection.
 
@@ -42,23 +42,6 @@ Overall, the ConvNeXt architecture aims to balance efficiency and performance, a
 [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) - a lightweight PyTorch wrapper for high-performance AI research. Think of it as a framework for organizing your PyTorch code.
 
 [Hydra](https://github.com/facebookresearch/hydra) - a framework for elegantly configuring complex applications. The key feature is the ability to dynamically create a hierarchical configuration by composition and override it through config files and the command line.
-
-<br>
-
-## Main Ideas
-
-- [**Predefined Structure**](#project-structure): clean and scalable so that work can easily be extended
-- [**Rapid Experimentation**](#your-superpowers): thanks to hydra command line superpowers
-- [**Little Boilerplate**](#how-it-works): thanks to automating pipelines with config instantiation
-- [**Main Configs**](#main-config): allow to specify default training configuration
-- [**Experiment Configs**](#experiment-config): allow to override chosen hyperparameters
-- [**Workflow**](#workflow): comes down to 4 simple steps
-- [**Experiment Tracking**](#experiment-tracking): Tensorboard, W&B, Neptune, Comet, MLFlow and CSVLogger
-- [**Logs**](#logs): all logs (checkpoints, configs, etc.) are stored in a dynamically generated folder structure
-- [**Hyperparameter Search**](#hyperparameter-search): made easier with Hydra plugins like Optuna Sweeper
-- [**Tests**](#tests): generic, easy-to-adapt tests for speeding up the development
-- [**Continuous Integration**](#continuous-integration): automatically test your repo with Github Actions
-- [**Best Practices**](#best-practices): a couple of recommended tools, practices and standards
 
 <br>
 
@@ -111,21 +94,20 @@ Install dependencies
 
 ```bash
 # clone project
-git clone https://github.com/YourGithubName/your-repo-name
-cd your-repo-name
+git clone https://github.com/adhiiisetiawan/covid19-recognition
+cd covid19-recognition
 
-# [OPTIONAL] create conda environment
-conda create -n myenv python=3.9
-conda activate myenv
+# [OPTIONAL] create python environment
+python3 -m venv [env-name]
 
-# install pytorch according to instructions
-# https://pytorch.org/get-started/
+# activate environment
+source [env-name]/bin/activate
 
 # install requirements
 pip install -r requirements.txt
 ```
 
-Train model with default configuration
+Train model with default configuration, default configuration using ConvNeXt Base
 
 ```bash
 # train on CPU
@@ -135,14 +117,22 @@ python src/train.py trainer=cpu
 python src/train.py trainer=gpu
 ```
 
-Train model with chosen experiment configuration from [configs/experiment/](configs/experiment/)
+Train model with specific architecture
 
 ```bash
-python src/train.py experiment=experiment_name.yaml
+# train on CPU
+python src/train.py trainer=cpu model=convnext_small
+
+# train on GPU
+python src/train.py trainer=gpu model=convnext_tiny
 ```
 
-You can override any parameter from command line like this
+Train model using wandb logger
 
 ```bash
-python src/train.py trainer.max_epochs=20 data.batch_size=64
+# train on CPU
+python src/train.py trainer=cpu model=convnext_small logger=wandb
+
+# train on GPU
+python src/train.py trainer=gpu model=convnext_tiny logger=wandb
 ```
