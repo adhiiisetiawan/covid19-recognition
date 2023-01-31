@@ -148,7 +148,7 @@ python src/train.py trainer=gpu model=convnext_tiny logger=wandb
 <br>
 
 ## Performance and Results
-Here's the performance of the model using Covid-19 X-Ray Dataset. Detail about graphic accuracy and loss can be found on [wandb report]([link](https://wandb.ai/adhiisetiawan/covid19-recognition)).
+Here's the performance of the model using Covid-19 X-Ray Dataset. Detail about graphic accuracy and loss can be found on [wandb report](https://wandb.ai/adhiisetiawan/covid19-recognition).
 
 | name | acc | #params | model |
 |:---:|:---:|:---:|:---:|
