@@ -2,12 +2,19 @@ import torch
 import torch.nn as nn
 import pytorch_lightning as pl
 import wandb
-from components.convnext import convnext_base
 from torchmetrics import Accuracy
 
 
-class ConvNeXtLitModel(pl.LightningModule):
-    def __init__(self, input_shape, num_classes, learning_rate=1e-3, transfer=False, model_name="convnext_base"):
+class ConvNeXtLitModule(pl.LightningModule):
+    def __init__(self, 
+        net: torch.nn.Module,
+        optimizer: torch.optim.Optimizer,
+        scheduler: torch.optim.lr_scheduler,
+        input_shape: tuple =(3, 224, 224),
+        num_classes: int = 3,
+        learning_rate=1e-3, 
+        transfer=True, 
+        model_name="convnext_base"):
         super().__init__()
         
         # log hyperparameters
@@ -18,7 +25,7 @@ class ConvNeXtLitModel(pl.LightningModule):
         self.model_name = model_name
         
         # transfer learning if pretrained=True
-        self.feature_extractor = convnext_base(pretrained=transfer)
+        self.feature_extractor = net
 
         if transfer:
             # layers are frozen by using eval()
@@ -111,4 +118,4 @@ class ConvNeXtLitModel(pl.LightningModule):
 
 
 if __name__ == "__main__":
-    _ = ConvNeXtLitModel(None, None, None,  None)
+    _ = ConvNeXtLitModule(None, None, None, None)
