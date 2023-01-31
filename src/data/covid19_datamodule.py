@@ -43,12 +43,7 @@ class Covid19DataModule(pl.LightningDataModule):
               transforms.ToTensor(),
               transforms.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])
         ])
-
-        self.train: Optional[datasets.ImageFolder] = None
-        self.val: Optional[datasets.ImageFolder] = None
-        self.test: Optional[datasets.ImageFolder] = None
     
-
     @property
     def num_classes(self):
         return 3
