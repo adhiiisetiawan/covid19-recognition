@@ -10,7 +10,7 @@ os.environ['KAGGLE_USERNAME'] = "adhisetiawan"
 os.environ['KAGGLE_KEY'] = "96ce54a3b358a4b04a716080f32292ec"
 
 
-class CovidDataModule(pl.LightningDataModule):
+class Covid19DataModule(pl.LightningDataModule):
     def __init__(
         self,
         data_dir: str = 'data/',
@@ -98,4 +98,4 @@ class CovidDataModule(pl.LightningDataModule):
 
 
 if __name__ == "__main__":
-    _ = CovidDataModule()
+    _ = Covid19DataModule()
