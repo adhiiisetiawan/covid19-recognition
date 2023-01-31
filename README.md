@@ -156,3 +156,42 @@ Here's the performance of the model using Covid-19 X-Ray Dataset. Detail about g
 | ConvNeXt-S | 95.4 | 50M | [model](https://drive.google.com/file/d/1-0_-XMVs0NSvdEGk6Iv8EJdyRyU0ZsGL/view?usp=share_link) |
 | ConvNeXt-B | 93.8 | 89M | [model](https://drive.google.com/file/d/1-010Cz8Cl6HpiQfB9MNn4oUtJpfdXv_X/view?usp=share_link) |
 | ConvNeXt-L | - | 198M | [model](link) |
+
+<br>
+
+## Acknowledgement
+- This project is built using the [Lightning Hydra](https://github.com/ashleve/lightning-hydra-template) template.
+- Thanks to Joseph Paul Cohen et al. for providing the dataset. [Paper 1](https://arxiv.org/pdf/2003.11597.pdf) | [Paper 2](https://arxiv.org/pdf/2006.11988v3.pdf) | [GitHub](https://github.com/ieee8023/covid-chestxray-dataset)
+- Thanks to `pranavraikokte` for providing the preprocessed dataset in [Kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset)
+
+<br>
+
+## Reference
+```
+@article{cohen2020covid,
+  title={COVID-19 image data collection},
+  author={Joseph Paul Cohen and Paul Morrison and Lan Dao},
+  journal={arXiv 2003.11597},
+  url={https://github.com/ieee8023/covid-chestxray-dataset},
+  year={2020}
+}
+```
+
+```
+@article{cohen2020covidProspective,
+  title={COVID-19 Image Data Collection: Prospective Predictions Are the Future},
+  author={Joseph Paul Cohen and Paul Morrison and Lan Dao and Karsten Roth and Tim Q Duong and Marzyeh Ghassemi},
+  journal={arXiv 2006.11988},
+  url={https://github.com/ieee8023/covid-chestxray-dataset},
+  year={2020}
+}
+```
+
+```
+@Article{liu2022convnet,
+  author  = {Zhuang Liu and Hanzi Mao and Chao-Yuan Wu and Christoph Feichtenhofer and Trevor Darrell and Saining Xie},
+  title   = {A ConvNet for the 2020s},
+  journal = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year    = {2022},
+}
+```
