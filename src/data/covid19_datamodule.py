@@ -2,6 +2,7 @@ import os
 import zipfile
 import pytorch_lightning as pl
 
+from typing import Optional
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from kaggle.api.kaggle_api_extended import KaggleApi
@@ -42,6 +43,10 @@ class Covid19DataModule(pl.LightningDataModule):
               transforms.ToTensor(),
               transforms.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])
         ])
+
+        self.train: Optional[datasets.ImageFolder] = None
+        self.val: Optional[datasets.ImageFolder] = None
+        self.test: Optional[datasets.ImageFolder] = None
     
 
     @property
