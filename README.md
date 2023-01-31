@@ -152,7 +152,7 @@ Here's the performance of the model using Covid-19 X-Ray Dataset. Detail about g
 
 | name | acc | #params | model |
 |:---:|:---:|:---:|:---:|
-| ConvNeXt-T | 96.9 | 28M | [model](link) |
-| ConvNeXt-S | 95.4 | 50M | [model](link) |
-| ConvNeXt-B | 93.8 | 89M | [model](link) |
+| ConvNeXt-T | 96.9 | 28M | [model](https://drive.google.com/file/d/1Z7Q-dv-iIkkjt2tM-wravQQ7E0TFY0hw/view?usp=share_link) |
+| ConvNeXt-S | 95.4 | 50M | [model](https://drive.google.com/file/d/1-0_-XMVs0NSvdEGk6Iv8EJdyRyU0ZsGL/view?usp=share_link) |
+| ConvNeXt-B | 93.8 | 89M | [model](https://drive.google.com/file/d/1-010Cz8Cl6HpiQfB9MNn4oUtJpfdXv_X/view?usp=share_link) |
 | ConvNeXt-L | - | 198M | [model](link) |
