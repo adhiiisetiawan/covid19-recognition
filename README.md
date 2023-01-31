@@ -15,12 +15,16 @@
 ## Description
 The current COVID-19 pandemic has highlighted the importance of early detection of the disease. In many cases, chest X-rays can play a crucial role in identifying the presence of COVID-19, as well as differentiating between COVID-19, normal and pneumonia cases. This project aims to develop a deep learning model for recognizing COVID-19 positive cases from X-Ray chest images using the ConvNeXt architecture. The purpose of this project is to provide a tool for early detection of COVID-19 using chest X-rays. The model will be trained on a dataset of X-Ray images and will be evaluated based on its accuracy and other performance metrics. This tool can be used by healthcare professionals to make informed decisions in the management of COVID-19 patients. This project also aims to test the performance of ConvNeXt architecture on chest X-Ray image datasets.
 
+<br>
+
 ## Dataset
 The dataset used for training and testing the model consists of X-Ray chest images of COVID-19 positive, normal, and pneumonia cases. The dataset was obtained from the following research papers:
 - Covid Image Data Collection by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2003.11597.pdf)
 - COVID-19 Image Data Collection: Prospective Predictions are the Future by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2006.11988v3.pdf)
 
 They are also provide GitHub link that can be found [here](https://github.com/ieee8023/covid-chestxray-dataset). Dataset that already preprocessed also can be download from [kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset). 
+
+<br>
 
 ## Architecture
 ![](https://github.com/adhiiisetiawan/covid19-recognition/blob/main/convnext.png)
@@ -36,6 +40,8 @@ This project using ConvNeXt architecture, ConvNeXt is a modification of the ResN
 4. **Dense Connections:** ConvNeXt uses dense connections, which means that every residual block is connected to every other block in the network. This helps reduce the vanishing gradient problem that can occur in deep ConvNets.
 
 Overall, the ConvNeXt architecture aims to balance efficiency and performance, and has been shown to achieve state-of-the-art results on various computer vision tasks such as image classification and object detection.
+
+<br>
 
 ## Main Technologies
 
@@ -106,6 +112,8 @@ source [env-name]/bin/activate
 # install requirements
 pip install -r requirements.txt
 ```
+
+Before run training, you must download the dataset first from kaggle
 
 Train model with default configuration, default configuration using ConvNeXt Base
 
