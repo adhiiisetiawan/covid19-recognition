@@ -113,7 +113,7 @@ source [env-name]/bin/activate
 pip install -r requirements.txt
 ```
 
-Before run training, you must download the dataset first from kaggle
+**Note:** Before run training, you must download the dataset first from [kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset) and put in the `data` folder. You also need to extract the dataset. For another approach, you need to register a kaggle API to download the folder with code. But, I recomended to download manually since using kaggle API need some effort to configure. 
 
 Train model with default configuration, default configuration using ConvNeXt Base
 
