@@ -13,7 +13,7 @@
 <br>
 
 ## Description
-The current COVID-19 pandemic has highlighted the importance of early detection of the disease. In many cases, chest X-rays can play a crucial role in identifying the presence of COVID-19, as well as differentiating between COVID-19, normal and pneumonia cases. This project aims to develop a deep learning model for recognizing COVID-19 positive cases from X-Ray chest images using the ConvNeXt architecture. The purpose of this project is to provide a tool for early detection of COVID-19 using chest X-rays. The model will be trained on a dataset of X-Ray images and will be evaluated based on its accuracy and other performance metrics. This tool can be used by healthcare professionals to make informed decisions in the management of COVID-19 patients. This project also aims to test the performance of ConvNeXt architecture on chest X-Ray image datasets.
+The COVID-19 pandemic has highlighted the importance of early detection of the disease. In many cases, chest X-rays can play a crucial role in identifying the presence of COVID-19, as well as differentiating between COVID-19, normal and pneumonia cases. This project aims to develop a deep learning model for recognizing COVID-19 positive cases from X-Ray chest images using the ConvNeXt architecture. The purpose of this project is to provide a tool for early detection of COVID-19 using chest X-rays. The model will be trained on a dataset of X-Ray images and will be evaluated based on its accuracy and other performance metrics. This tool can be used by healthcare professionals to make informed decisions in the management of COVID-19 patients. This project also aims to test the performance of ConvNeXt architecture on chest X-Ray image datasets.
 
 <br>
 
