@@ -22,7 +22,7 @@ The dataset used for training and testing the model consists of X-Ray chest imag
 - Covid Image Data Collection by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2003.11597.pdf)
 - COVID-19 Image Data Collection: Prospective Predictions are the Future by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2006.11988v3.pdf)
 
-They are also provide GitHub link that can be found [here](https://github.com/ieee8023/covid-chestxray-dataset). Dataset that already preprocessed also can be download from [kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset). 
+They also provide a GitHub link that can be found [here](https://github.com/ieee8023/covid-chestxray-dataset). Dataset that is already preprocessed also can be downloaded from [kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset).
 
 <br>
 
