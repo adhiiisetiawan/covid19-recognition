@@ -7,39 +7,37 @@
 [![lightning](https://img.shields.io/badge/-Lightning_1.8+-792ee5?logo=pytorchlightning&logoColor=white)](https://pytorchlightning.ai/)
 [![hydra](https://img.shields.io/badge/Config-Hydra_1.3-89b8cd)](https://hydra.cc/)
 [![black](https://img.shields.io/badge/Code%20Style-Black-black.svg?labelColor=gray)](https://black.readthedocs.io/en/stable/)
-[![pre-commit](https://img.shields.io/badge/Pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![tests](https://github.com/ashleve/lightning-hydra-template/actions/workflows/test.yml/badge.svg)](https://github.com/ashleve/lightning-hydra-template/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/ashleve/lightning-hydra-template/branch/main/graph/badge.svg)](https://codecov.io/gh/ashleve/lightning-hydra-template)
-[![code-quality](https://github.com/ashleve/lightning-hydra-template/actions/workflows/code-quality-main.yaml/badge.svg)](https://github.com/ashleve/lightning-hydra-template/actions/workflows/code-quality-main.yaml)
 [![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)](https://github.com/ashleve/lightning-hydra-template#license)
-[![contributors](https://img.shields.io/github/contributors/ashleve/lightning-hydra-template.svg)](https://github.com/ashleve/lightning-hydra-template/graphs/contributors)
-
-A clean template to kickstart your deep learning project 🚀⚡🔥<br>
-Click on [<kbd>Use this template</kbd>](https://github.com/ashleve/lightning-hydra-template/generate) to initialize new repository.
-
-_Suggestions are always welcome!_
 
 </div>
 
 <br>
 
-## 📌  Introduction
+## Introduction
+The current COVID-19 pandemic has highlighted the importance of early detection of the disease. In many cases, chest X-rays can play a crucial role in identifying the presence of COVID-19, as well as differentiating between COVID-19, normal and pneumonia cases. This project aims to develop a deep learning model for recognizing COVID-19 positive cases from X-Ray chest images using the ConvNeXt architecture.
 
-**Why you might want to use it:**
+## Purpose
+The purpose of this project is to provide a tool for early detection of COVID-19 using chest X-rays. The model will be trained on a dataset of X-Ray images and will be evaluated based on its accuracy and other performance metrics. This tool can be used by healthcare professionals to make informed decisions in the management of COVID-19 patients. This project also aims to test the performance of ConvNeXt architecture on chest X-Ray image datasets.
 
-- Convenient technology stack for deep learning prototyping - allows you to rapidly iterate over new models, datasets and tasks on different hardware accelerators like CPUs, multi-GPUs or TPUs.
-- Thoroughly commented - you can use this repo as an educational resource.
-- A collection of useful tools, configs, and code snippets - you can use this repo as a reference for various utilities, e.g. Makefile, pre-commit hooks or smoke tests.
+## Dataset
+The dataset used for training and testing the model consists of X-Ray chest images of COVID-19 positive, normal, and pneumonia cases. The dataset was obtained from the following research papers:
+- Covid Image Data Collection by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2003.11597.pdf)
+- COVID-19 Image Data Collection: Prospective Predictions are the Future by Joseph Paul Cohen et al. [arXiv](https://arxiv.org/pdf/2006.11988v3.pdf)
 
-**Why you might not want to use it:**
+They are also provide GitHub link that can be found [here](https://github.com/ieee8023/covid-chestxray-dataset). Dataset that already preprocessed also can be download from [kaggle](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset). 
 
-- Lightning and Hydra are still evolving and integrate many libraries, which means sometimes things break - for the list of currently known problems visit [this page](https://github.com/ashleve/lightning-hydra-template/labels/bug).
-- Template is not really adjusted for data science and building data pipelines that depend on each other - it's much efficient to use it for model prototyping on ready-to-use data.
-- The configuration setup is built with simple lightning training in mind - you might need to put some effort to adjust it for different use cases, e.g. lightning lite.
+## Architecture
+This project using ConvNeXt architecture, ConvNeXt is a modification of the ResNet architecture for deep ConvNets. It introduces the concept of "grouped convolutions" which allow for a more efficient utilization of computation resources such as memory and computation power. The main features of ConvNeXt include:
 
-_\*keep in mind this is unofficial community project_
+1. Grouped Convolutions: The main difference from ResNet is that ConvNeXt uses grouped convolutions instead of standard convolutions in the residual blocks. Grouped convolutions split the input channels into groups, and apply a separate set of filters to each group. This allows for more computation to be done with a smaller number of parameters, which helps reduce overfitting.
 
-<br>
+2. Bottleneck Design: ConvNeXt uses a bottleneck design, where the number of filters in the 3x3 convolution is reduced, and then increased again using a 1x1 convolution. This design helps reduce the number of parameters and computational costs.
+
+3. Stem and Head: ConvNeXt has a stem and head component, which includes several convolutional layers to extract features from the input image and several fully connected layers to make the final prediction.
+
+4. Dense Connections: ConvNeXt uses dense connections, which means that every residual block is connected to every other block in the network. This helps reduce the vanishing gradient problem that can occur in deep ConvNets.
+
+Overall, the ConvNeXt architecture aims to balance efficiency and performance, and has been shown to achieve state-of-the-art results on various computer vision tasks such as image classification and object detection.
 
 ## Main Technologies
 
