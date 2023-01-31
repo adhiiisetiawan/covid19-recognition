@@ -13,7 +13,7 @@ def test_covid19_datamodule(batch_size):
     dm = Covid19DataModule(data_dir=data_dir, batch_size=batch_size)
     dm.prepare_data()
 
-    assert not dm.data_train and not dm.data_val and not dm.data_test
+    assert not dm.train and not dm.val and not dm.test
     assert Path(data_dir, "Covid19-dataset").exists()
     assert Path(data_dir, "Covid19-dataset", "train").exists()
     assert Path(data_dir, "Covid19-dataset", "test").exists()
