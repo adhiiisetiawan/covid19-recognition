@@ -144,3 +144,15 @@ python src/train.py trainer=cpu model=convnext_small logger=wandb
 # train on GPU
 python src/train.py trainer=gpu model=convnext_tiny logger=wandb
 ```
+
+<br>
+
+## Performance and Results
+Here's the performance of the model using Covid-19 X-Ray Dataset. Detail about graphic accuracy and loss can be found on [wandb report](link).
+
+| name | acc | #params | model |
+|:---:|:---:|:---:|:---:|
+| ConvNeXt-T | 96.9 | 28M | [model](link) |
+| ConvNeXt-S | 95.4 | 50M | [model](link) |
+| ConvNeXt-B | 93.8 | 89M | [model](link) |
+| ConvNeXt-L | - | 198M | [model](link) |
