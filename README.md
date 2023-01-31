@@ -149,6 +149,7 @@ python src/train.py trainer=gpu model=convnext_tiny logger=wandb
 
 ## Performance and Results
 Here's the performance of the model using Covid-19 X-Ray Dataset. I just provide three ConvNeXt models (tiny, small, base) because of limited resources. Details about graphic accuracy and loss can be found on [wandb report](https://wandb.ai/adhiisetiawan/covid19-recognition).
+![](https://github.com/adhiiisetiawan/covid19-recognition/blob/main/wandb.png)
 
 | name | acc | #params | model |
 |:---:|:---:|:---:|:---:|
